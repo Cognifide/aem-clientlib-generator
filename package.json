@@ -5,6 +5,11 @@
   "main": "index.js",
   "author": "Jakub Lamprecht",
   "license": "MIT",
+  "homepage": "https://github.com/Cognifide/aem-clientlib-generator-webpack-plugin#readme",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/Cognifide/aem-clientlib-generator-webpack-plugin.git"
+  },
   "keywords": [
     "aem",
     "clientlib",
