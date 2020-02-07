@@ -21,7 +21,7 @@ class AemClientlibGeneratorPlugin {
     }
 
     if (this.options && !Object.keys(this.options).length) {
-      console.error(chalk.red('ERROR: AemClientlibGeneratorPlugin configuration is invalid.'));
+      console.error(chalk.red('ERROR: AemClientlibGenerator configuration is invalid.'));
       process.exit(1);
     }
 
@@ -32,8 +32,8 @@ class AemClientlibGeneratorPlugin {
   }
 
   apply(compiler) {
-    compiler.hooks.afterEmit.tap('AemClientlibGeneratorPlugin', () => {
-      console.log(chalk.bold('Starting ClientLib Generator'));
+    compiler.hooks.afterEmit.tap('AemClientlibGeneratorWebpackPlugin', () => {
+      console.log(chalk.bold('Starting AemClientLibGenerator'));
       console.log(`Clientlibs path: ${ this.config.clientLibRoot }`);
 
       aemClientlibGenerator(this.libs, this.config);
