@@ -5,7 +5,7 @@ const fs = require('fs');
 
 const DEFAULT_CONFIG_FILE_NAME = 'clientlib.config.js';
 
-class AemClientlibGeneratorPlugin {
+class AemClientlibGeneratorWebpackPlugin {
   constructor(options) {
     if (!options) {
       const configPath = path.resolve(process.cwd(), DEFAULT_CONFIG_FILE_NAME);
@@ -41,4 +41,4 @@ class AemClientlibGeneratorPlugin {
   }
 };
 
-module.exports = AemClientlibGeneratorPlugin;
+module.exports = AemClientlibGeneratorWebpackPlugin;
